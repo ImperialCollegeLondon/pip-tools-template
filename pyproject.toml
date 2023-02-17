@@ -1,22 +1,34 @@
-[tool.poetry]
-name = "MyProject"
-version = "0.1.0"
-description = ""
-authors = ["Jane Doe <jane_doe@some_email.com>"]
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
 
-[tool.poetry.dependencies]
-python = "^3.9"
+[tool.setuptools.packages.find]
+exclude = ["htmlcov"] # Exclude the coverage report file from setuptools package finder
 
-[tool.poetry.dev-dependencies]
-pytest = "^7.0"
-pytest-cov = "^4.0.0"
-pytest-mypy = "^0.10.0"
-pytest-mock = "^3.7.0"
-isort = "^5.10.1"
-pre-commit = "^3.0.4"
-black = "^23.1.0"
-flake8 = "^6.0.0"
-flake8-docstrings = "^1.6.0"
+[project]
+name = "datahub"
+version = "0.0.1"
+authors = [
+    { name = "Jane Doe", email = "jane_doe@some_email.com" },
+    { name = "Imperial College London RSE Team", email = "ict-rse-team@imperial.ac.uk" }
+]
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "black",
+    "flake8",
+    "flake8-docstrings",
+    "isort",
+    "mypy",
+    "pip-tools",
+    "pre-commit",
+    "pytest",
+    "pytest-cov",
+    "pytest-mypy",
+    "pytest-mock"
+]
 
 [tool.mypy]
 disallow_any_explicit = true
@@ -35,7 +47,3 @@ profile = "black"
 
 [tool.pytest.ini_options]
 addopts = "-v --mypy -p no:warnings --cov=myproject --cov-report=html --doctest-modules --ignore=myproject/__main__.py"
-
-[build-system]
-requires = ["poetry-core>=1.0.0"]
-build-backend = "poetry.core.masonry.api"
