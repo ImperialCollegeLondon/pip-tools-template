@@ -1,45 +1,65 @@
-# Poetry Template
+# pip-tools Template
 
-[![Test and build](https://github.com/ImperialCollegeLondon/poetry_template_2/actions/workflows/ci.yml/badge.svg)](https://github.com/ImperialCollegeLondon/poetry_template_2/actions/workflows/ci.yml)
+[![Test and build](https://github.com/ImperialCollegeLondon/pip-tools-template/actions/workflows/ci.yml/badge.svg)](https://github.com/ImperialCollegeLondon/pip-tools-template/actions/workflows/ci.yml)
 
-This is a minimal Python 3.9 application that uses [poetry](https://python-poetry.org) for packaging and dependency management. It also provides [pre-commit](https://pre-commit.com/) hooks (for [isort](https://pycqa.github.io/isort/), [Black](https://black.readthedocs.io/en/stable/), [Flake8](https://flake8.pycqa.org/en/latest/) and [mypy](https://mypy.readthedocs.io/en/stable/)) and automated tests using [pytest](https://pytest.org/) and [GitHub Actions](https://github.com/features/actions). Pre-commit hooks are automatically kept updated with a dedicated GitHub Action, this can be removed and replace with [pre-commit.ci](https://pre-commit.ci) if using an public repo. It was developed by the [Imperial College Research Computing Service](https://www.imperial.ac.uk/admin-services/ict/self-service/research-support/rcs/).
+This is a minimal Python 3.9 application that uses [`pip-tools`] for packaging and dependency management. It also provides [`pre-commit`](https://pre-commit.com/) hooks (for [`isort`](https://pycqa.github.io/isort/), [`black`](https://black.readthedocs.io/en/stable/), [`flake8`](https://flake8.pycqa.org/en/latest/) and [`mypy`](https://mypy.readthedocs.io/en/stable/)) and automated tests using [`pytest`](https://pytest.org/) and [GitHub Actions](https://github.com/features/actions). Pre-commit hooks are automatically kept updated with a dedicated GitHub Action, this can be removed and replace with [pre-commit.ci](https://pre-commit.ci) if using an public repo. It was developed by the [Imperial College Research Computing Service](https://www.imperial.ac.uk/admin-services/ict/self-service/research-support/rcs/).
+
+[`pip-tools`] is chosen as a lightweight dependency manager that adheres to the [latest standards](https://peps.python.org/pep-0621/ using `pyproject.toml`).
+
+## Usage
 
 To use this repository as a template for your own application:
 
-1. [Download and install Poetry](https://python-poetry.org/docs/#installation) following the instructions for your OS.
-2. Click the green "Use this template" button above
-3. Name and create your repository
-4. Clone your new repository and make it your working directory
-5. Replace instances of `myproject` with your own application name. Edit:
-   - `pyproject.toml`
+1. Click the green "Use this template" button above
+2. Name and create your repository
+3. Clone your new repository and make it your working directory
+4. Replace instances of `myproject` with your own application name. Edit:
+   - `pyproject.toml` (also change the list of authors here)
    - `tests/test_myproject.py`
    - Rename `myproject` directory
-6. Set up the virtual environment:
-
+5. Create and activate a Virtual Environment:
    ```bash
-   poetry install
+   python -m venv .venv
+   source .venv/bin/activate # on Windows: `.venv\Scripts\Activate.ps1`
    ```
-
-7. Activate the virtual environment (alternatively, ensure any python-related command is preceded by `poetry run`):
-
+6. Install development requirements:
    ```bash
-   poetry shell
+   pip install -r dev-requirements.txt
    ```
-
-8. Install the git hooks:
-
+7. Install the git hooks:
    ```bash
    pre-commit install
    ```
-
-9. Run the main app:
-
+8. Run the main app:
    ```bash
    python -m myproject
    ```
-
-10. Run the tests:
-
+9. Run the tests:
    ```bash
    pytest
    ```
+
+### Updating Dependencies
+To add or remove dependencies:
+1. Edit the `dependencies` variables in the `pyproject.toml` file (aim to keep develpment tools separate from the project requirements).
+2. Update the requirements files:
+   - `pip-compile` for `requirements.txt` - the project requirements.
+   - `pip-compile --extra dev -o dev-requirements.txt` for `dev-requirements.txt` - the development requirements.
+3. Sync the files with your installation (install packages):
+   - `pip-sync dev-requirements.txt requirements.txt`
+
+To upgrade pinned versions, use the `--upgrade` flag with `pip-compile`.
+
+### Customising
+
+All configuration can be customised to your preferences. The key places to make changes for this are:
+- The `pyproject.toml` file, where you can edit:
+  - The build system (change from setuptools to other packaging tools like [Hatch](https://hatch.pypa.io/) or [flit](https://flit.pypa.io/)).
+  - The python version.
+  - The project dependencies. Extra optional dependencies can be added by adding another list under `[project.optional-dependencies]` (i.e. `doc = ["mkdocs"]`).
+  - The `mypy`, `isort` and `pytest` configurations.
+- The `.flake8` file for `flake8` configuration.
+- The `.pre-commit-config.yaml` for pre-commit settings.
+- The `.github` directory for all the CI configuration.
+
+[`pip-tools`]: https://pip-tools.readthedocs.io/en/latest/

@@ -27,4 +27,3 @@ repos:
     hooks:
       - id: markdownlint
         args: ["--disable", "MD013"]
-        
