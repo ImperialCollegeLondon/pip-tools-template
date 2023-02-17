@@ -1,0 +1,41 @@
+[tool.poetry]
+name = "MyProject"
+version = "0.1.0"
+description = ""
+authors = ["Jane Doe <jane_doe@some_email.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.0"
+pytest-cov = "^4.0.0"
+pytest-mypy = "^0.10.0"
+pytest-mock = "^3.7.0"
+isort = "^5.10.1"
+pre-commit = "^3.0.4"
+black = "^23.1.0"
+flake8 = "^6.0.0"
+flake8-docstrings = "^1.6.0"
+
+[tool.mypy]
+disallow_any_explicit = true
+disallow_any_generics = true
+warn_unreachable = true
+warn_unused_ignores = true
+disallow_untyped_defs = true
+exclude = [".venv/"]
+
+[[tool.mypy.overrides]]
+module = "tests.*"
+disallow_untyped_defs = false
+
+[tool.isort]
+profile = "black"
+
+[tool.pytest.ini_options]
+addopts = "-v --mypy -p no:warnings --cov=myproject --cov-report=html --doctest-modules --ignore=myproject/__main__.py"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
