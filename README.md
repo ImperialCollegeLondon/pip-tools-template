@@ -50,6 +50,8 @@ To add or remove dependencies:
 
 To upgrade pinned versions, use the `--upgrade` flag with `pip-compile`.
 
+Versions can be restricted from updating within the `pyproject.toml` using standard python package version specifiers, i.e. `"black<23"` or `"pip-tools!=6.12.2"`
+
 ### Customising
 
 All configuration can be customised to your preferences. The key places to make changes for this are:
