@@ -20,7 +20,8 @@ To use this repository as a template for your own application:
 5. Create and activate a Virtual Environment:
    ```bash
    python -m venv .venv
-   source .venv/bin/activate # on Windows: `.venv\Scripts\Activate.ps1`
+   source .venv/bin/activate # with Powershell on Windows: `.venv\Scripts\Activate.ps1`
+
    ```
 6. Install development requirements:
    ```bash
