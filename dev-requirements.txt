@@ -102,7 +102,7 @@ tomli==2.0.1
     #   pytest
 typing-extensions==4.5.0
     # via mypy
-virtualenv==20.19.0
+virtualenv==20.21.0
     # via pre-commit
 wheel==0.38.4
     # via pip-tools
