@@ -1,5 +1,4 @@
 name: Dependabot auto-merge
-run-name: Actor is ${{ github.actor }}
 
 on:
   pull_request:
