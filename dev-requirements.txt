@@ -67,7 +67,7 @@ platformdirs==3.2.0
     #   virtualenv
 pluggy==1.0.0
     # via pytest
-pre-commit==3.2.0
+pre-commit==3.2.1
     # via datahub (pyproject.toml)
 pycodestyle==2.10.0
     # via flake8
