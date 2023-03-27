@@ -34,7 +34,7 @@ flake8==6.0.0
     #   flake8-docstrings
 flake8-docstrings==1.7.0
     # via datahub (pyproject.toml)
-identify==2.5.18
+identify==2.5.22
     # via pre-commit
 iniconfig==2.0.0
     # via pytest
