@@ -39,6 +39,16 @@ To use this repository as a template for your own application:
    ```bash
    pytest
    ```
+10. Follow the below steps on GitHub to create a Deploy Key needed for one of
+    the GitHub actions to work properly:
+    1. [Generate and save a deploy key], make sure to check "Allow write access"
+       when adding the key on GitHub.
+    1. [Add a secret] named SSH\_PRIVATE\_KEY by copy pasting the contents of
+       the private key file you generated in the previous step.
+
+[Generate and save a deploy key]: https://docs.github.com/en/authentication/connecting-to-github-with-ssh/managing-deploy-keys#deploy-keys
+[Add a secret]: https://docs.github.com/en/actions/security-guides/encrypted-secrets#creating-encrypted-secrets-for-a-repository
+
 
 ### Updating Dependencies
 To add or remove dependencies:
