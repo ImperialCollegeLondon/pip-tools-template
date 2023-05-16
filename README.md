@@ -64,5 +64,7 @@ All configuration can be customised to your preferences. The key places to make 
 - The `.flake8` file for `flake8` configuration.
 - The `.pre-commit-config.yaml` for pre-commit settings.
 - The `.github` directory for all the CI configuration.
+  - This repo uses `pre-commit.ci` to update pre-commit package versions and automatically merges those PRs with the `auto-merge.yml` workflow.
+  - Note that `pre-commit.ci` is an external service and free for open source repos. For private repos uncomment the commented portion of the `pre-commit_autoupdate.yml` workflow.
 
 [`pip-tools`]: https://pip-tools.readthedocs.io/en/latest/
