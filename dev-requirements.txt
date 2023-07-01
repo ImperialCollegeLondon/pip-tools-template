@@ -100,7 +100,7 @@ tomli==2.0.1
     #   coverage
     #   mypy
     #   pytest
-typing-extensions==4.5.0
+typing-extensions==4.7.0
     # via mypy
 virtualenv==20.21.0
     # via pre-commit
