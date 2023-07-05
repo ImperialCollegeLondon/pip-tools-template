@@ -18,30 +18,40 @@ To use this repository as a template for your own application:
    - `tests/test_myproject.py`
    - Rename `myproject` directory
 5. Create and activate a Virtual Environment:
+
    ```bash
    python -m venv .venv
    source .venv/bin/activate # with Powershell on Windows: `.venv\Scripts\Activate.ps1`
-
    ```
+
 6. Install development requirements:
+
    ```bash
    pip install -r dev-requirements.txt
    ```
+
 7. Install the git hooks:
+
    ```bash
    pre-commit install
    ```
+
 8. Run the main app:
+
    ```bash
    python -m myproject
    ```
+
 9. Run the tests:
+
    ```bash
    pytest
    ```
 
 ### Updating Dependencies
+
 To add or remove dependencies:
+
 1. Edit the `dependencies` variables in the `pyproject.toml` file (aim to keep develpment tools separate from the project requirements).
 2. Update the requirements files:
    - `pip-compile` for `requirements.txt` - the project requirements.
@@ -55,7 +65,9 @@ Versions can be restricted from updating within the `pyproject.toml` using stand
 
 ### Customising
 
-All configuration can be customised to your preferences. The key places to make changes for this are:
+All configuration can be customised to your preferences. The key places to make changes
+for this are:
+
 - The `pyproject.toml` file, where you can edit:
   - The build system (change from setuptools to other packaging tools like [Hatch](https://hatch.pypa.io/) or [flit](https://flit.pypa.io/)).
   - The python version.
