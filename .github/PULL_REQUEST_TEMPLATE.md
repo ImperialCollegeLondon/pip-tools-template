@@ -17,7 +17,7 @@ Fixes # (issue)
 
 - [ ] All tests pass
 - [ ] The documentation builds and looks OK
-- [ ] Pre-commit hooks have be run successfully
+- [ ] Pre-commit hooks run successfully
 
 ## Further checks
 
