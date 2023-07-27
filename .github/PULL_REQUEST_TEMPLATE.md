@@ -15,9 +15,9 @@ Fixes # (issue)
 
 ## Key checklist
 
-- [ ] All tests pass
-- [ ] The documentation builds and looks OK
-- [ ] Pre-commit hooks run successfully
+- [ ] All tests pass (eg. `python -m pytest`)
+- [ ] The documentation builds and looks OK (eg. `python -m sphinx -b html docs docs/build`)
+- [ ] Pre-commit hooks run successfully (eg. `pre-commit run --all-files`)
 
 ## Further checks
 
