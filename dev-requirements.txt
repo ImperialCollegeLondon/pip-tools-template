@@ -89,7 +89,7 @@ pytest-mock==3.11.1
     # via datahub (pyproject.toml)
 pytest-mypy==0.10.3
     # via datahub (pyproject.toml)
-pyyaml==6.0
+pyyaml==6.0.1
     # via pre-commit
 snowballstemmer==2.2.0
     # via pydocstyle
