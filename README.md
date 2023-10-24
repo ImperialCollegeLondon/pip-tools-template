@@ -80,3 +80,8 @@ for this are:
   - Note that `pre-commit.ci` is an external service and free for open source repos. For private repos uncomment the commented portion of the `pre-commit_autoupdate.yml` workflow.
 
 [`pip-tools`]: https://pip-tools.readthedocs.io/en/latest/
+
+
+### Publishing
+
+The GitHub workflow includes an action to publish on release (`publish.yml`). Add steps where indicated to publish a Docker image, PyPI package, documentation, etc.
