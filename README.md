@@ -83,4 +83,5 @@ for this are:
 
 ### Publishing
 
-The GitHub workflow includes an action to publish on release (`publish.yml`). Add steps where indicated to publish a Docker image, PyPI package, documentation, etc.
+The GitHub workflow includes an action to publish on release.
+To run this action, uncomment the commented portion of `publish.yml`, and modify the steps for the desired behaviour (publishing a Docker image, publishing to PyPI, deploying documentation etc.)
