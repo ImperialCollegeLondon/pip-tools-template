@@ -81,7 +81,6 @@ for this are:
 
 [`pip-tools`]: https://pip-tools.readthedocs.io/en/latest/
 
-
 ### Publishing
 
 The GitHub workflow includes an action to publish on release (`publish.yml`). Add steps where indicated to publish a Docker image, PyPI package, documentation, etc.
