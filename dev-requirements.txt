@@ -83,7 +83,7 @@ pytest==7.4.0
     #   pytest-mypy
 pytest-cov==4.1.0
     # via datahub (pyproject.toml)
-pytest-mock==3.11.1
+pytest-mock==3.12.0
     # via datahub (pyproject.toml)
 pytest-mypy==0.10.3
     # via datahub (pyproject.toml)
