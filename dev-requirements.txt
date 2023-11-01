@@ -40,7 +40,7 @@ isort==5.12.0
     # via datahub (pyproject.toml)
 mccabe==0.7.0
     # via flake8
-mypy==1.5.1
+mypy==1.6.1
     # via
     #   datahub (pyproject.toml)
     #   pytest-mypy
