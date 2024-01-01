@@ -100,7 +100,7 @@ tomli==2.0.1
     #   pip-tools
     #   pyproject-hooks
     #   pytest
-typing-extensions==4.8.0
+typing-extensions==4.9.0
     # via
     #   filelock
     #   mypy
