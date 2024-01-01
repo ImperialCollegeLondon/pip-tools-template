@@ -36,7 +36,7 @@ identify==2.5.27
     # via pre-commit
 iniconfig==2.0.0
     # via pytest
-isort==5.12.0
+isort==5.13.2
     # via datahub (pyproject.toml)
 mccabe==0.7.0
     # via flake8
