@@ -2,7 +2,7 @@
 
 [![Test and build](https://github.com/ImperialCollegeLondon/pip-tools-template/actions/workflows/ci.yml/badge.svg)](https://github.com/ImperialCollegeLondon/pip-tools-template/actions/workflows/ci.yml)
 
-This is a minimal Python 3.10 application that uses [`pip-tools`] for packaging and dependency management. It also provides [`pre-commit`](https://pre-commit.com/) hooks (for [`isort`](https://pycqa.github.io/isort/), [`black`](https://black.readthedocs.io/en/stable/), [`flake8`](https://flake8.pycqa.org/en/latest/) and [`mypy`](https://mypy.readthedocs.io/en/stable/)) and automated tests using [`pytest`](https://pytest.org/) and [GitHub Actions](https://github.com/features/actions). Pre-commit hooks are automatically kept updated with a dedicated GitHub Action, this can be removed and replace with [pre-commit.ci](https://pre-commit.ci) if using an public repo. It was developed by the [Imperial College Research Computing Service](https://www.imperial.ac.uk/admin-services/ict/self-service/research-support/rcs/).
+This is a minimal Python 3.10 application that uses [`pip-tools`] for packaging and dependency management. It also provides [`pre-commit`](https://pre-commit.com/) hooks (for for [ruff](https://pypi.org/project/ruff/) and [`mypy`](https://mypy.readthedocs.io/en/stable/)) and automated tests using [`pytest`](https://pytest.org/) and [GitHub Actions](https://github.com/features/actions). Pre-commit hooks are automatically kept updated with a dedicated GitHub Action, this can be removed and replace with [pre-commit.ci](https://pre-commit.ci) if using an public repo. It was developed by the [Imperial College Research Computing Service](https://www.imperial.ac.uk/admin-services/ict/self-service/research-support/rcs/).
 
 [`pip-tools`] is chosen as a lightweight dependency manager that adheres to the [latest standards](https://peps.python.org/pep-0621/) using `pyproject.toml`.
 
@@ -72,8 +72,7 @@ for this are:
   - The build system (change from setuptools to other packaging tools like [Hatch](https://hatch.pypa.io/) or [flit](https://flit.pypa.io/)).
   - The python version.
   - The project dependencies. Extra optional dependencies can be added by adding another list under `[project.optional-dependencies]` (i.e. `doc = ["mkdocs"]`).
-  - The `mypy`, `isort` and `pytest` configurations.
-- The `.flake8` file for `flake8` configuration.
+  - The `mypy` and `pytest` configurations.
 - The `.pre-commit-config.yaml` for pre-commit settings.
 - The `.github` directory for all the CI configuration.
   - This repo uses `pre-commit.ci` to update pre-commit package versions and automatically merges those PRs with the `auto-merge.yml` workflow.
