@@ -62,7 +62,7 @@ pytest-mypy==0.10.3
     # via datahub (pyproject.toml)
 pyyaml==6.0.1
     # via pre-commit
-ruff==0.1.15
+ruff==0.3.0
     # via datahub (pyproject.toml)
 tomli==2.0.1
     # via
