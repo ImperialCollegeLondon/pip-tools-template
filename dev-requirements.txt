@@ -48,7 +48,7 @@ pre-commit==3.6.0
     # via datahub (pyproject.toml)
 pyproject-hooks==1.0.0
     # via build
-pytest==8.0.0
+pytest==8.0.2
     # via
     #   datahub (pyproject.toml)
     #   pytest-cov
