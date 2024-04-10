@@ -1,7 +1,6 @@
 {
     "recommendations": [
-        "ms-python.black-formatter",
-        "ms-python.flake8",
+        "charliermarsh.ruff",
         "ms-python.mypy-type-checker",
         "ms-python.python"
     ]
