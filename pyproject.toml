@@ -12,7 +12,7 @@ authors = [
     { name = "Jane Doe", email = "jane_doe@some_email.com" },
     { name = "Imperial College London RSE Team", email = "ict-rse-team@imperial.ac.uk" }
 ]
-requires-python = ">=3.10"
+requires-python = ">=3.12"
 dependencies = []
 
 [project.optional-dependencies]
