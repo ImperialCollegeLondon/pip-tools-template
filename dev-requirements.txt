@@ -20,7 +20,7 @@ filelock==3.16.1
     # via
     #   pytest-mypy
     #   virtualenv
-identify==2.6.1
+identify==2.6.6
     # via pre-commit
 iniconfig==2.0.0
     # via pytest
